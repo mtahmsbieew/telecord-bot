@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -qq update
 RUN apt-get -qq install -y git python3 python3-pip \
     locales python3-lxml aria2 \
